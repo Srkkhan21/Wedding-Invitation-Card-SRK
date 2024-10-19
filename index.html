@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cover-page">
+    <div class="heart-container">
+        <h1>Click on the heart to witness <br>the beautiful journey of <br>two souls becoming one</h1>
+        <div class="heart" onclick="enterInvitation()">❤</div>
+    </div>
+
+    <!-- Autoplay Background Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function enterInvitation() {
+            const heartContainer = document.querySelector('.heart-container');
+            heartContainer.classList.add('fade-out');
+
+            setTimeout(function() {
+                window.location.href = "main.html";
+            }, 1500); // Matches the fade-out animation time
+        }
+    </script>
+</body>
+</html>
